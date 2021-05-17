@@ -15,9 +15,9 @@ import org.junit.jupiter.params.provider.MethodSource;
 /**
  * <a href="https://leetcode.com/problems/partition-labels/">763. Partition Labels</a>
  */
-public class Solution763 {
+public class Problem763 {
 
-  private static final Solution763 SOLUTION = new Solution763();
+  private static final Problem763 SOLUTION = new Problem763();
 
   public List<Integer> partitionLabels(String s) {
     final var met = new HashSet<Character>();

@@ -15,9 +15,9 @@ import org.junit.jupiter.params.provider.MethodSource;
 /**
  * <a href="https://leetcode.com/problems/integer-to-roman/">12. Integer to Roman</a>
  */
-public class Solution12 {
+public class Problem12 {
 
-  private static final Solution12 SOLUTION = new Solution12();
+  private static final Problem12 SOLUTION = new Problem12();
 
   private static final String EMPTY = "";
   private static final Map<Integer, String> DICTIONARY = Map.ofEntries(
