@@ -11,10 +11,12 @@ import java.util.stream.Stream;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import com.leetcode.annotations.MySolution;
 
 /**
  * <a href="https://leetcode.com/problems/partition-labels/">763. Partition Labels</a>
  */
+@MySolution
 public class Problem763 {
 
   private static final Problem763 SOLUTION = new Problem763();

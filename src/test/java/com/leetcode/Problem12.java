@@ -11,10 +11,12 @@ import java.util.stream.Stream;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import com.leetcode.annotations.MySolution;
 
 /**
  * <a href="https://leetcode.com/problems/integer-to-roman/">12. Integer to Roman</a>
  */
+@MySolution
 public class Problem12 {
 
   private static final Problem12 SOLUTION = new Problem12();
