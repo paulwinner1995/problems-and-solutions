@@ -36,7 +36,7 @@ public class Problem12 {
     final Deque<String> roman = new LinkedList<>();
 
     for (int rank = 1, value, digit; input > 0; rank *= 10) {
-      value = input % (rank * 10);
+      value = input % (10 * rank);
       digit = value / rank;
       input -= value;
 
