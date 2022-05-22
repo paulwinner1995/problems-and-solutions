@@ -1,23 +1,11 @@
-package com.leetcode;
+package сom.leetcode.problems.p189;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
+import сom.leetcode.annotations.ThirdPartySolution;
 
-import java.util.stream.Stream;
-
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
-import com.leetcode.annotations.ThirdPartySolution;
-
-/**
- * <a href="https://leetcode.com/problems/rotate-array/">189. Rotate Array</a>
- */
 @ThirdPartySolution
-public class Problem189 {
+class SolutionImpl implements Solution {
 
-  private static final Problem189 SOLUTION = new Problem189();
-
+  @Override
   public void rotate(int[] nums, int k) {
     // nums = [1, 2, 3, 4, 5, 6, 7]; k = 3
     for (int start = 0, count = 0; count < nums.length; start++) {
@@ -40,19 +28,5 @@ public class Problem189 {
         // 2) current = 4; next = 0; temp = 1; count = 6; nums = [(5), 6, 7, 1, 2, 3, 4]
       } while (start != current);
     }
-  }
-
-  @ParameterizedTest
-  @MethodSource("data")
-  void test(int[] nums, int k, int[] expected) {
-    SOLUTION.rotate(nums, k);
-    assertThat(nums, is(expected));
-  }
-
-  private static Stream<Arguments> data() {
-    return Stream.of(
-        Arguments.of(new int[]{1, 2, 3, 4, 5, 6, 7}, 3, new int[]{5, 6, 7, 1, 2, 3, 4}),
-        Arguments.of(new int[]{-1, -100, 3, 99}, 2, new int[]{3, 99, -1, -100})
-    );
   }
 }
